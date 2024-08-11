@@ -9,7 +9,7 @@ st.set_page_config(page_title="Mulitple Disease Prediction",
 
 diabetes_model = pickle.load('diabetes_disease.pkl','rb')
 heart_disease_model = pickle.load('heart_disease.pkl','rb')
-kidney_disease_model = pickle.load(open('kindey_disease.pkl','rb')
+kidney_disease_model = pickle.load('kindey_disease.pkl','rb')
 
 NewBMI_Overweight=0
 NewBMI_Underweight=0
