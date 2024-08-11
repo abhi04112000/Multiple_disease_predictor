@@ -3,13 +3,13 @@ import pickle
 import os
 from streamlit_option_menu import option_menu
 
-st.set_page_config(page_title="Mulitple Disease Prediction",layout="wide", page_icon="👨‍⚕️⚕️💊")
+st.set_page_config(page_title="Mulitple Disease Prediction",
+                   layout="wide", 
+                   page_icon="👨‍⚕️")
 
-working_dir = os.path.dirname(os.path.abspath(__file__))
-
-diabetes_model = pickle.load(open(f'{working_dir}/Saved_Models/diabetes_disease.pkl','rb'))
-heart_disease_model = pickle.load(open(f'{working_dir}/Saved_Models/heart_disease.pkl','rb'))
-kidney_disease_model = pickle.load(open(f'{working_dir}/Saved_Models/kindey_disease.pkl','rb'))
+diabetes_model = pickle.load('diabetes_disease.pkl','rb'))
+heart_disease_model = pickle.load('heart_disease.pkl','rb'))
+kidney_disease_model = pickle.load(open('kindey_disease.pkl','rb'))
 
 NewBMI_Overweight=0
 NewBMI_Underweight=0
