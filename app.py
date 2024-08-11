@@ -7,9 +7,11 @@ st.set_page_config(page_title="Mulitple Disease Prediction",
                    layout="wide", 
                    page_icon="👨‍⚕️")
 
-diabetes_model = pickle.load('diabetes_disease.pkl')
-heart_disease_model = pickle.load('heart_disease.pkl')
-kidney_disease_model = pickle.load('kindey_disease.pkl')
+working_dir = os.path.dirname(os.path.abspath(__file__))
+
+diabetes_model = pickle.load(open(f'{working_dir}/Saved_Models/diabetes_disease.pkl','rb'))
+heart_disease_model = pickle.load(open(f'{working_dir}/Saved_Models/heart_disease.pkl','rb'))
+kidney_disease_model = pickle.load(open(f'{working_dir}/Saved_Models/kindey_disease.pkl','rb'))
 
 NewBMI_Overweight=0
 NewBMI_Underweight=0
