@@ -3,7 +3,7 @@ import pickle
 import os
 from streamlit_option_menu import option_menu
 
-st.set_page_config(page_title="Mulitple Disease Prediction",
+st.set_page_config(page_title="Disease Predictor Assistant 🤖 🩺",
                    layout="wide", 
                    page_icon="👨‍⚕️")
 
@@ -25,16 +25,16 @@ NewGlucose_Overweight=0
 NewGlucose_Secret=0
 
 with st.sidebar:
-    selected = option_menu("Mulitple Disease Prediction", 
-                ['Diabetes Prediction',
-                 'Heart Disease Prediction',
-                 'Kidney Disease Prediction'],
+    selected = option_menu("Select the Disease", 
+                ['Diabetes',
+                 'Heart Disease',
+                 'Kidney Disease'],
                  menu_icon='hospital-fill',
                  icons=['activity','heart', 'person'],
                  default_index=0)
 
-if selected == 'Diabetes Prediction':
-    st.title("Diabetes Prediction Using Machine Learning")
+if selected == 'Diabetes':
+    st.title("Diabetes Checker 🕵")
 
     col1, col2, col3 = st.columns(3)
 
@@ -96,8 +96,8 @@ if selected == 'Diabetes Prediction':
             diabetes_result = "The person has no diabetic"
     st.success(diabetes_result)
 
-if selected == 'Heart Disease Prediction':
-    st.title("Heart Disease Prediction Using Machine Learning")
+if selected == 'Heart Disease':
+    st.title("Heart Disease Checker 🕵")
     col1, col2, col3  = st.columns(3)
 
     with col1:
@@ -143,9 +143,9 @@ if selected == 'Heart Disease Prediction':
             heart_disease_result = "This person does not have any heart disease"
     st.success(heart_disease_result)
 
-if selected == 'Kidney Disease Prediction':
+if selected == 'Kidney Disease':
     
-    st.title("Kidney Disease Prediction using ML")
+    st.title("Kidney Disease Checker 🕵")
 
     col1, col2, col3, col4, col5 = st.columns(5)
 
