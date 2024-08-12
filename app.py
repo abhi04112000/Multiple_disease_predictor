@@ -30,13 +30,14 @@ NewGlucose_Secret=0
 
 with st.sidebar:
     selected = option_menu("Select the Disease", 
-                ['Diabetes',
+                ['Medi-BoT',
+                  'Diabetes',
                  'Heart Disease',
                  'Kidney Disease',
                  'Breast Cancer Disease',
                  'Pneumonia Disease'],
                  menu_icon='hospital',
-                 icons=['activity','heart', 'person-wheelchair','person-hearts','lungs'],
+                 icons=['robot','activity','heart', 'person-wheelchair','person-hearts','lungs'],
                  default_index=0)
   
 if selected == 'Diabetes':
