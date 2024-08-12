@@ -2,10 +2,14 @@ import streamlit as st
 import pickle 
 import os
 from streamlit_option_menu import option_menu
+from util import classify, set_background
 
 st.set_page_config(page_title="Disease Predictor Assistant 🤖 🩺",
                    layout="wide", 
                    page_icon="👨‍⚕️")
+
+set_background('./backimage/bgs_image.png')
+
 
 working_dir = os.path.dirname(os.path.abspath(__file__))
 
@@ -28,11 +32,13 @@ with st.sidebar:
     selected = option_menu("Select the Disease", 
                 ['Diabetes',
                  'Heart Disease',
-                 'Kidney Disease'],
-                 menu_icon='hospital-fill',
-                 icons=['activity','heart', 'person'],
+                 'Kidney Disease',
+                 'Breast Cancer Disease',
+                 'Pneumonia Disease'],
+                 menu_icon='hospital',
+                 icons=['activity','heart', 'person-wheelchair','person-hearts','lungs'],
                  default_index=0)
-
+  
 if selected == 'Diabetes':
     st.title("Diabetes Checker 🕵")
 
